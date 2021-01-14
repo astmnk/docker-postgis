@@ -11,9 +11,8 @@ Starting a `postgis` container.
 First you need to modify the settings on the readme file, then run:
 
 ```
-docker-compose up 
+docker build -t postgis .
 ```
-
 
 Once the server is running you can connect to it.
 

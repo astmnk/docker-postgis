@@ -2,6 +2,9 @@ FROM postgres:10.15
 
 ENV POSTGIS_VERSION 2.4.9
 
+ENV POSTGRES_USER test
+ENV POSTGRES_PASS postgres
+
 RUN buildDeps=" \
   postgresql-server-dev-${PG_MAJOR} \
   libgeos-dev \
