@@ -1,6 +1,4 @@
-# PostGIS 
-
-## How to use this image
+# PostGIS 2.4.9 using Postgres 10.15
 
 The `postgis` image is built using the official `postgres` docker image, which explains some basic usage of the `postgres` image.
 
@@ -8,16 +6,11 @@ https://registry.hub.docker.com/_/postgres/
 
 Starting a `postgis` container.
 
-First you need to modify the settings on the readme file, then run:
-
 ```
 docker build -t postgis .
 ```
 
-Once the server is running you can connect to it.
-
-
-You can use `docker exec`:
+Once the server is running you can connect to it:
 
 ```
 docker exec server-name psql -U postgres -l
@@ -34,7 +27,7 @@ docker exec server-name psql -U postgres -l
 (4 rows)
 ```
 
-The image will create a database template when run called `template_postgis`. When creating a database your can use the `template_postgis` template as it already has the extensions `postgis` and `postgis_topology` pre-installed. 
+When creating a database your can use the `template_postgis` template as it already has the extensions `postgis` and `postgis_topology` pre-installed. 
 
 ```
 docker exec server-name psql -U postgres -c "CREATE DATABASE my_db TEMPLATE template_postgis;"
